@@ -1,0 +1,46 @@
+<%= form_with(model: user) do |form| %>
+
+  <div class="row1">
+    <p>
+      <b>This is not a real online service! You know you need something like this in your life you realize your deepest dreams.<br>Sign up <i>now</i> to get started.<br><br><br>You <i>know</i> you want to.</b>
+    </p>
+  </div>
+  <div class="row2">
+    <p><b>Let's do this!</b></p>
+    <div class="formflex">
+      <div>
+        <%= form.label :username, "USERNAME", class: "formlabel" %>
+        <%= form.text_field :username, autofocus: true, class: "forminput" %>
+      </div>
+
+      <div>
+        <%= form.label :email, "EMAIL", class: "formlabel" %>
+        <%= form.text_field :email, class: "forminput" %>
+      </div>
+
+      <div> 
+        <%= form.label :fullname, "FULL NAME",class: "formlabel" %>
+        <%= form.text_field :fullname, class: "forminput" %>
+      </div>
+
+      <div>
+        <%= form.label :phonenumber, "PHONE NUMBER",class: "formlabel" %>
+        <%= form.number_field :phonenumber, class: "forminput" %>
+      </div>
+
+      <div>
+        <%= form.label :password, "PASSWORD",class: "formlabel" %>
+        <%= form.password_field :password, class: "forminput" %>
+      </div>
+
+      <div>
+        <%= form.label :password_confirmation, "CONFIRM PASSWORD",class: "formlabel" %>
+        <%= form.password_field :password_confirmation, class: "forminput" %>
+      </div>
+    </div>
+  </div>
+  <div class="row3">
+    <%= form.submit "Register", class: "button_submit" %>
+  </div>
+  <%= javascript_tag 'passvalidate.js' %>
+<% end %>

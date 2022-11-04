@@ -282,6 +282,15 @@ html,body{
 				div{
 					display: block;
 					background-color: $white;
+					h6,p{
+						margin-left: 25px;
+						margin-right: 10px;
+					}
+					p{
+						margin-top: -25px;
+						color: darken($gray, 50%);
+						font-size: 10px
+					}
 				}
 				div:first-child{
 					border-top-left-radius: 11px;
